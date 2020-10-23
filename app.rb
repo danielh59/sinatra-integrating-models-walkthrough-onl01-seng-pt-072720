@@ -12,6 +12,7 @@ class App < Sinatra::Base
     @analyzed_text = TextAnalyzer.new(params[:user_text])
     @counter = @analyzed_text.count_of_words
     @vowels =  @analyzed_text.count_of_vowels.to_s
+    @consonants = @analyzed_text.count_of_consonants
     erb :results
   end
 end
