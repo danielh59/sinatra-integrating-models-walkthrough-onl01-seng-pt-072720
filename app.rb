@@ -11,7 +11,7 @@ class App < Sinatra::Base
     # @analyzed_text = TextAnalyzer.new(text_from_user)
     @analyzed_text = TextAnalyzer.new(params[:user_text])
     @counter = @analyzed_text.count_of_words
-    @vowels =  @analyzed_text.count_of_vowels.to_s
+    @vowels =  @analyzed_text.count_of_vowels
     @consonants = @analyzed_text.count_of_consonants.to_s
     @most = @analyzed_text.most_used_letter.to_s
     @most_count = @most.count
